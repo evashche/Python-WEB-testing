@@ -3,7 +3,7 @@ from ..base_web import BaseWeb
 
 class MainForm(BaseWeb):
     def __init__(self):
-        self.loc = f"/form"
+        self.loc = f"//form"
 
     def button_text(self, text):
         return ButtonWithText(self.loc, text)
