@@ -1,4 +1,5 @@
 import constants
+from selenium import webdriver
 
 
 class WebDriverRapper(object):
@@ -6,11 +7,8 @@ class WebDriverRapper(object):
         self.driver = None
 
     def connect(self):
-        from selenium import webdriver
         self.driver = webdriver.Firefox()
-        self.driver.maximize_window()
-        self.driver.get(constants.HOMEPAGE)
-        self.driver.implicitly_wait(10)
+        self.driver.set_window_size(1920, 1080)
 
     def disconnect(self):
         self.driver.quit()

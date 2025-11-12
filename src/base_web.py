@@ -1,6 +1,5 @@
 import random
 import time
-
 import pytest
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver import ActionChains
@@ -8,14 +7,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.color import Color
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 import my_driver
 
 
-@pytest.mark.usefixtures("driver_init")
-class BaseTest(object):
+# @pytest.mark.usefixtures("driver_base")
+class BaseWeb(object):
     failure_exception = AssertionError
-
+    
     @property
     def locator(self):
         return self.loc
