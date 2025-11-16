@@ -1,6 +1,4 @@
-import constants
 from selenium import webdriver
-
 
 class WebDriverRapper(object):
     def __init__(self):
